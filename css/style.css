@@ -395,9 +395,6 @@ body {
   aspect-ratio: 133/49;
   width: 8.3125rem
 }
-.header__menu {
-  flex-grow: 1
-}
 .header__button {
   padding: 0;
   gap: .125rem .4375rem;
@@ -1792,11 +1789,6 @@ body {
   }
   .header__logo img {
     width: 6.8125rem
-  }
-  .header__menu {
-    position: absolute;
-    width: 0;
-    height: 0
   }
   .header__button {
     gap: 0 .3125rem
