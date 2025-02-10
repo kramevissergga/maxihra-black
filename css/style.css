@@ -1431,7 +1431,7 @@ body {
     pointer-events: none;
     border-radius: 0 0 1.875rem 1.875rem;
     transition: background-color .3s;
-    padding: .125rem;
+    padding: .1875rem;
     padding-top: .1875rem
   }
   ._select-open .select__options {

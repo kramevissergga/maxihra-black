@@ -3612,6 +3612,10 @@
             }
         }
     }));
+    document.addEventListener("selectCallback", (e => {
+        e.detail.select.dispatchEvent(new Event("change"));
+        console.log(e.detail.select.value);
+    }));
     window["FLS"] = false;
     addLoadedClass();
     pageNavigation();
