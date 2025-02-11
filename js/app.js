@@ -3599,16 +3599,17 @@
             document.documentElement.classList.remove("menu-open");
         }
         if (e.target.closest(".video__button")) {
-            const videoBody = e.target.closest(".video__body");
-            const codeVideo = videoBody.dataset.code;
-            if (codeVideo) {
-                const urlVideo = `https://www.youtube.com/embed/${codeVideo}?rel=0&showinfo=0&autoplay=1`;
-                const iframe = document.createElement("iframe");
-                iframe.setAttribute("allowfullscreen", "");
-                iframe.setAttribute("allow", `autoplay; encrypted-media`);
-                iframe.setAttribute("src", urlVideo);
-                videoBody.innerHTML = "";
-                videoBody.appendChild(iframe);
+            const button = e.target.closest(".video__button");
+            const videoContainer = button.closest("[data-watch]");
+            if (videoContainer) {
+                const preview = videoContainer.querySelector(".video__preview");
+                const video = videoContainer.querySelector("video");
+                if (video) {
+                    button.remove();
+                    if (preview) preview.remove();
+                    video.removeAttribute("hidden");
+                    video.play();
+                }
             }
         }
     }));

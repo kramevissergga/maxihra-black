@@ -871,7 +871,7 @@ body {
   overflow: hidden;
   aspect-ratio: 1120/530
 }
-.video__body iframe {
+.video__body video {
   position: absolute;
   top: 0;
   left: 0;
